@@ -1,18 +1,20 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import Pharoahsdata from '../components/Pharoahsdata'
-import PharaohSection from '../components/Pharaohbanner'
+import React from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Pharoahsdata from "../components/Pharoahsdata";
+import PharaohSection from "../components/Pharaohbanner";
+import Loading from "../components/Loading";
 const Pharaohs = () => {
   return (
-    <section >
+    <section>
+      <Loading />
       <Navbar />
       <PharaohSection />
-      <Pharoahsdata/>
+      <Pharoahsdata />
 
       <Footer />
     </section>
-  )
-}
+  );
+};
 
-export default Pharaohs
+export default Pharaohs;

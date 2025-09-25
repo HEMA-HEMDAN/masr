@@ -1,6 +1,5 @@
 import React from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import { useState, useEffect } from "react";
 import Home from "./sections/Home";
 import About from "./sections/About";
 import History from "./sections/History";
@@ -13,38 +12,12 @@ import HistoryDetail from "./components/HistoryDetail";
 import MonumentDetail from "./components/MonumentDetail";
 import MuseumDetail from "./components/MuseumDetail";
 import Pharoahsdetial from "./components/Pharoahsdetial";
+import Loading from "./components/Loading";
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
-  const [visible, setVisible] = useState(true);
-
-  useEffect(() => {
-    const handleLoad = () => {
-      setTimeout(() => {
-        setLoading(false);
-        setTimeout(() => setVisible(false), 2000); // optional: fully remove after fade
-      }, 2000);
-    };
-
-    if (document.readyState === "complete") {
-      handleLoad();
-    } else {
-      window.addEventListener("load", handleLoad);
-    }
-
-    return () => window.removeEventListener("load", handleLoad);
-  }, []);
   return (
     <Router>
-      <div
-        className={`fixed top-0 left-0 w-full h-full z-50 flex items-center justify-center bg-white dark:bg-black transition-opacity duration-700 ${
-          loading
-            ? "opacity-100 pointer-events-auto z-55"
-            : "opacity-0 pointer-events-none"
-        } ${visible ? "" : "hidden"}`}
-      >
-        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500 border-opacity-50" />
-      </div>
+      <Loading />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />

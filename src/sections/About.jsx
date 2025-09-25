@@ -6,6 +6,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import Loading from "../components/Loading";
 
 const sections = [
   {
@@ -23,7 +24,7 @@ const sections = [
   {
     title: "Mohamed Wael",
     text: "Hi, I'm Mohamed Wael Ellakany, a computer science student at Damanhur University, living in Damanhour. I have a strong passion for technology, with skills in front-end web development and C++. I'm always eager to learn new technologies and build creative, user-friendly projects.",
-    images: ["/about/mo wael.jpg", "/about/mowael2.jpg"],
+    images: ["/about/mo wael.webp", "/about/mowael2.jpg"],
   },
   {
     title: "Nourhan",
@@ -33,7 +34,7 @@ const sections = [
   {
     title: "mohamed abo fool",
     text: "Explore the treasures of Egypt housed in world-famous museums, preserving thousands of years of awe-inspiring art, relics, and mysteries.",
-    images: ["about/abofool.jpg"],
+    images: ["about/abofool.webp"],
   },
   {
     title: "Yara Emad Eid Ahmed",
@@ -45,6 +46,7 @@ const sections = [
 const About = () => {
   return (
     <div className="overflow-hidden">
+      <Loading />
       <Navbar />
 
       <section className="museum h-[100vh] bg-[url('/about/hero.jpg')] bg-cover bg-center bg-no-repeat flex items-center justify-center">
