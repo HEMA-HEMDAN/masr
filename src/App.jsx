@@ -12,12 +12,10 @@ import HistoryDetail from "./components/HistoryDetail";
 import MonumentDetail from "./components/MonumentDetail";
 import MuseumDetail from "./components/MuseumDetail";
 import Pharoahsdetial from "./components/Pharoahsdetial";
-import Loading from "./components/Loading";
 
 const App = () => {
   return (
     <Router>
-      <Loading />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />

@@ -57,7 +57,7 @@ function Navbar() {
         </button>
       </div>
       {navOpen && (
-        <div className=" absolute top-0 h-[100vh] right-0 w-1/2 flex flex-col items-center justify-start pt-20 px-4 gap-4 backdrop-blur-xl text-white ">
+        <div className=" absolute top-0 h-[100vh] right-0 w-1/2 flex flex-col items-center justify-start pt-20 px-4 gap-4 bg-black/60 backdrop-blur-md text-white  ">
           {navLinks.map((item) => (
             <Link
               key={item.id}

@@ -51,15 +51,15 @@ const About = () => {
 
       <section className="museum h-[100vh] bg-[url('/about/hero.jpg')] bg-cover bg-center bg-no-repeat flex items-center justify-center">
         <div className="max-w-[1000px] mx-auto text-center">
-          <h1 className="text-5xl text-[#fcd34d] font-bold mb-4">
+          <h1 className="text-2xl md:text-5xl text-[#fcd34d] font-bold mb-4">
             It's nice to meet you, let us introduce ourselves
           </h1>
-          <h1 className="text-5xl text-white font-bold mb-6">
+          <h1 className="text-xl md:text-4xl text-white font-bold mb-6">
             We are first-year computer science students at Damanhour University
           </h1>
 
           <button
-            className="px-9 py-4 text-[1.1em] rounded-full bg-gradient-to-r from-[#d6b372] to-[#f5e6b0] text-black cursor-pointer relative overflow-hidden shadow-[0_0_10px_#d6b372] transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-[0_0_20px_#ffd700,0_0_40px_#ffd70070]"
+            className="px-8 py-4 text-md md:text-xl rounded-full bg-gradient-to-r from-[#d6b372] to-[#f5e6b0] text-black cursor-pointer relative overflow-hidden shadow-[0_0_10px_#d6b372] transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-[0_0_20px_#ffd700,0_0_40px_#ffd70070]"
             onClick={() =>
               window.scrollTo({
                 top: document.getElementById("about").offsetTop,
