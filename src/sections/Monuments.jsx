@@ -4,13 +4,15 @@ import Footer from "../components/Footer";
 import Td from "../components/TD";
 import MonumentsSection from "../components/MonumentData";
 import Loading from "../components/Loading";
+import { Model } from "../components/models/Tut";
+import GymRenderer from "../components/models/ModelsRenderer";
 const Monuments = () => {
   return (
     <div>
       <Loading />
       <Navbar />
-
-      <Td folder={"history"} photo={"/history/amon.png"} />
+      <GymRenderer />
+      {/* <Td folder={"history"} photo={"/history/amon.png"} /> */}
 
       <MonumentsSection />
 
